@@ -17,7 +17,14 @@ class MainActivity : AppCompatActivity() {
 
         if (supportFragmentManager.findFragmentByTag("list") == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, ListFragment::class.java, null, "list")
+                .replace(
+                    R.id.container,
+                    ListFragment(
+                        onItemClicked = OnItemClickedDirections(supportFragmentManager),
+                        SomeHeavyWeightDependency()
+                    ),
+                    "list"
+                )
                 .commit()
         }
     }
