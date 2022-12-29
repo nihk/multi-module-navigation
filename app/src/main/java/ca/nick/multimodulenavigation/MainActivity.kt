@@ -2,6 +2,7 @@ package ca.nick.multimodulenavigation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.replace
 import ca.nick.list.ListFragment
 import ca.nick.multimodulenavigation.di.AppComponentProvider
 
